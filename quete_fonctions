@@ -1,0 +1,84 @@
+using System;
+
+namespace calculette
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for ( ; ; )
+            {
+                Console.WriteLine("Enter your first operand : ");
+                string firstOperand = Console.ReadLine();
+
+                Console.WriteLine("Enter your second operand : ");
+                string secondOperand = Console.ReadLine();
+
+                Console.WriteLine(" Which operation you choose ? : ");
+                string operatorChoose = Console.ReadLine();
+
+                
+
+                static float Add(float firstOperand, float secondOperand)
+                {
+                    return firstOperand + secondOperand;
+                }
+
+                static float Substract(float firstOperand, float secondOperand)
+                {
+                    return firstOperand - secondOperand;
+                }
+
+                static float Multiply(float firstOperand, float secondOperand)
+                {
+                    return firstOperand * secondOperand;
+                }
+
+                static float Divide(float firstOperand, float secondOperand)
+                {
+                    return firstOperand / secondOperand;
+                }
+
+                static float Modulo(float firstOperand, float secondOperand)
+                {
+                    return firstOperand % secondOperand;
+                }
+
+
+
+                float result = 0;
+
+                if (operatorChoose == "add")
+                {
+                    result = Add(float.Parse(firstOperand), float.Parse(secondOperand));
+                }
+
+                else if (operatorChoose == "substract")
+                {
+                    result = Substract(float.Parse(firstOperand), float.Parse(secondOperand));
+                }
+
+                else if (operatorChoose == "multiply")
+                {
+                    result = Multiply(float.Parse(firstOperand), float.Parse(secondOperand));
+                }
+
+                else if (operatorChoose == "divide")
+                {
+                    result = Divide(float.Parse(firstOperand), float.Parse(secondOperand));
+                }
+
+                else if (operatorChoose == "modulo")
+                {
+                    result = Modulo(float.Parse(firstOperand), float.Parse(secondOperand));
+                }
+
+
+
+                Console.WriteLine(firstOperand + " " + operatorChoose + " " + secondOperand + " = " + result);
+
+            }
+
+        }
+    }
+}
